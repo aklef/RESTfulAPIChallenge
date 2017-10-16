@@ -10,22 +10,28 @@
     "Qlik"
   ],
   "homepage": "https://github.com/aklef/RESTfulPalindromeAPIChallenge#readme",
-  "repository": {
+  "repository":
+  {
     "type": "git",
     "url": "git+https://github.com/aklef/RESTfulPalindromeAPIChallenge.git"
   },
-  "engines": {
+  "engines":
+  {
     "node": ">= 4.2.6",
     "npm": ">= 2.14.12"
   },
-  "devDependencies": {
+  "devDependencies":
+  {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongodb": "^2.2.33",
     "mongoose": "^4.12.2",
     "nodemon": "^1.12.1"
   },
-  "scripts": {
+  "scripts":
+  {
+    "mongo": "./run_database.sh",
+    "windb": "run_database.bat",
     "start": "nodemon server.js"
   }
 }
