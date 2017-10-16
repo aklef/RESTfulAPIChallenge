@@ -39,7 +39,7 @@ A Mongodb server database instance runs on a node. The database url is added to 
 
 Using the five different routes:
 
-![Rest API](https://docs.google.com/drawings/d/e/2PACX-1vQRDC0kCO1Pl5MDmkYR4EdGz8mUamy9-4_PyGprsZtLhRJe75qxMB8HfqnNKqxlfYNazb23HtZAvDoF/pub?w=183&h=100)
+![Rest API](https://docs.google.com/drawings/d/e/2PACX-1vQRDC0kCO1Pl5MDmkYR4EdGz8mUamy9-4_PyGprsZtLhRJe75qxMB8HfqnNKqxlfYNazb23HtZAvDoF/pub?w=343&h=150)
 
 and matching requests:
 
