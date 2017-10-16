@@ -1,6 +1,4 @@
 var express = require('express'),
-   app = express(),
-   port = process.env.PORT || 3000,
    mongoose = require('mongoose'),
    bodyParser = require('body-parser');
 
@@ -30,7 +28,10 @@ mongoose.connect(config.uri, config.settings, (err) =>
    }
 });
 
-// Start Listening
+// express.js config
+var app = express(),
+   port = process.env.PORT || 3000;
+
 app.use(bodyParser.urlencoded(
 {
    extended: true
