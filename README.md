@@ -1,6 +1,6 @@
 # RESTfulPalindromeAPIChallenge: 
 
-Creating a RESTful API as my Qlik audition :sleepy: :cry: :fist: :tired_face: :ok_hand:
+Creating a RESTful API as my Qlik audition :sleepy: :cry: :fist: :tired_face: :ok_hand: :+1: :+1: :pray:
 
 
 ## Dev. Env. Prerequisites ##
