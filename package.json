@@ -1,0 +1,25 @@
+{
+  "name": "RESTfulPalindromeAPIChallenge",
+  "version": "0.1.0-beta",
+  "license": "BSD-3-Clause",
+  "author": "Andréas Kaytar-Lefrançois <aklef@users.noreply.github.com>",
+  "description": "RESTful palindromeApi",
+  "main": "index.js",
+  "keywords": [
+    "RESTful",
+    "Qlik"
+  ],
+  "homepage": "https://github.com/aklef/RESTfulPalindromeAPIChallenge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aklef/RESTfulPalindromeAPIChallenge.git"
+  },
+  "engines": {
+    "node": ">= 4.2.6",
+    "npm": ">= 2.14.12"
+  },
+  "devDependencies": {
+    "mongodb": "^2.2.33"
+  },
+  "scripts": {}
+}
