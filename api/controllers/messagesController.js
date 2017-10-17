@@ -3,15 +3,17 @@
 var mongoose = require('mongoose'),
   Messages = mongoose.model('Messages');
 
+var callback = function (err, message)
+{
+  if (err)
+    res.send(err);
+  res.json(message);
+}
+  
 exports.list_all_messages = function (req, res)
 {
   Messages.find(
-  {}, function (err, message)
-  {
-    if (err)
-      res.send(err);
-    res.json(message);
-  });
+  {}, callback);
 };
 
 exports.delete_all_messages = function (req, res)
@@ -31,12 +33,8 @@ exports.delete_all_messages = function (req, res)
 exports.write_a_message = function (req, res)
 {
   var new_message = new Messages(req.body),
+    // Ignore case for the palindrome check
     contents = new_message.contents.toLowerCase();
-
-  function isPalindrome(s, i)
-  {
-    return (i = i || 0) < 0 || i >= s.length >> 1 || s[i] == s[s.length - 1 - i] && isPalindrome(s, ++i);
-  }
 
   if (isPalindrome(contents))
   {
@@ -48,6 +46,12 @@ exports.write_a_message = function (req, res)
       res.send(err);
     res.json(message);
   });
+  
+  // Efficient palindrome-checking in js
+  function isPalindrome(s, i)
+  {
+    return (i = i || 0) < 0 || i >= s.length >> 1 || s[i] == s[s.length - 1 - i] && isPalindrome(s, ++i);
+  }
 };
 
 exports.read_a_message = function (req, res)
