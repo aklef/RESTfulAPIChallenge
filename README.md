@@ -21,7 +21,8 @@ Clone the repo from the command line:
 
 2) Install [Node.js](https://nodejs.org/en/) globally on your system. ([all-platform downloads](https://nodejs.org/en/download/), and [Windows instructions](http://blog.teamtreehouse.com/install-node-js-npm-windows)).
 
-	If on Ubuntu 12.04 or higher, execute the following command in a standard shell ``sudo ln -s `which nodejs` /usr/bin/node`` to fix a *nodejs vs node* issue (see [this post on StackOverflow](https://stackoverflow.com/questions/18130164/nodejs-vs-node-on-ubuntu-12-04) for details)
+	If on Ubuntu 12.04 or higher, execute the following command ``sudo ln -s `which nodejs` /usr/bin/node`` (in a standard shell)
+	This fixes a *nodejs vs node* linux-y issue (see [this post on StackOverflow](https://stackoverflow.com/questions/18130164/nodejs-vs-node-on-ubuntu-12-04) for details)
 
 3.  From your console, be sure you can run `npm -v`. It should display the version number of npm.
 
@@ -53,8 +54,7 @@ and matching requests:
 4. [DEL] http://localhost:3000/messages/59e43e60ab99a0266cd51a58
 5. [DEL] http://localhost:3000/messages
 
-
-respectively, the REST API allows users to:
+These methods of the REST API respectively allow users to:
 
 - Post messages
 - List received messages
@@ -67,15 +67,11 @@ respectively, the REST API allows users to:
 
 The application servers runs at the command line level and serves local clients. 
 
-To start Mongodb, from a shell at the application directory, do:
+To start Mongodb under windows, execute the following command from a shell at the application directory:
 
 	npm run windb
 
-for windows computers, or for UNIX systems
-
-	npm run mongo
-
-To launch the server, simply:
+Now to launch the server: simply do (on Linux this also start mongodb):
 
 	npm start
 
@@ -87,4 +83,4 @@ and the API is now [reachable](http://localhost:3000) at
 
 To test a REST API one can use an app called *Postman*.
 
-A Postman collection is available [here](https://www.getpostman.com/collections/cae28f03ef022ab6ddcc)
+This REST API has a Postman collection of test requests for it [available here](https://www.getpostman.com/collections/cae28f03ef022ab6ddcc)
