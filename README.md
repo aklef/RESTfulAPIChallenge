@@ -21,19 +21,23 @@ Clone the repo from the command line:
 
 2) Install [Node.js](https://nodejs.org/en/) globally on your system. ([all-platform downloads](https://nodejs.org/en/download/), and [Windows instructions](http://blog.teamtreehouse.com/install-node-js-npm-windows)).
 
+	If on Ubuntu 12.04 or higher, execute the following command in a standard shell ``sudo ln -s `which nodejs` /usr/bin/node`` to fix a *nodejs vs node* issue (see [this post on StackOverflow](https://stackoverflow.com/questions/18130164/nodejs-vs-node-on-ubuntu-12-04) for details)
+
 3.  From your console, be sure you can run `npm -v`. It should display the version number of npm.
 
-4.  *From the repo dir*, run `npm install`. This sets up the app, grabbing all dependencies needed by the project and installing them to a local *node_modules* folder.
+4.  *From the repo dir*, run `npm install`. This sets up the app, grabbing *almost* all dependencies needed by the project and installing them to a local *node_modules* folder.
 
-5.  Once finished, make sure `npm ls` displays the full list of installed modules.
+	You will also have to run `npm install -g nodemon` or, on Ubuntu, `sudo npm install -g nodemon`
+	
+	On Windows, install [Mongodb](https://docs.mongodb.com/manual/installation/) separately
 
-3) Install [Mongodb](https://docs.mongodb.com/manual/installation/)
+6.  Once finished, make sure `npm ls` displays the full list of installed modules.
 
 # App architecture #
 
 The architecture of the app is quite straightforward:
 
-A Mongodb server database instance runs on a node. The database url is added to a mongoose instance connection, which feeds an express.js node server. Nodemon is a convenience package that watches for changed files and automatically restarts the server.
+A Mongodb server database instance runs on a node. The database URL is added to a mongoose instance connection, which feeds an express.js node server. Nodemon is simply a convenience package that watches for changed configuration files and automatically restarts the server.
 
 ![BlockDiagram](https://docs.google.com/drawings/d/e/2PACX-1vQTqnIUwvjAorqD4Jp9CcEcMO1th3wE3a9eAR76WN6NaPkOw_WtU9L0QkhYnzu-U2dDiBhskelrm2mY/pub?w=720&h=367)
 
